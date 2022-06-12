@@ -1,7 +1,10 @@
 const express = require('express');
-const routes = express.Router();
-const apiController = require('../controllers/apiController')
+const router = express.Router();
+const Controller = require('../controllers/Controller')
 
-routes.get('/', apiController.index)
+router.get('/', Controller.index)
+router.get('/view', Controller.view)
+router.get('/clients', Controller.getClients)
+router.get('/teste-conexao-database', Controller.teste)
 
-module.exports = routes;
+module.exports = router;

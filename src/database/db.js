@@ -16,7 +16,7 @@ const testConn = async () => {
     try {
         await connect()
         
-        return true
+        return {message:'true'}
     } catch (err) {
         console.log('Failed to connect', err)
         return {message : 'Failed to connect', err}
